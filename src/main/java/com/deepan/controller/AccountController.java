@@ -38,7 +38,7 @@ public class AccountController {
 //    handler method for getting all the accounts
     @GetMapping(value = "/accounts")
     public ResponseEntity<List<Account>> getAllAccountsHandler(
-            @RequestParam(value = "accType",required = false) String accType,
+            @RequestParam(value = "accType", required = false) String accType,
             @RequestParam(value = "sort", required = false) String sortProperty,
             @RequestParam(value = "order", required = false) String order,
             @RequestParam(value = "page", required = false) Integer page
@@ -70,7 +70,7 @@ public class AccountController {
 
 //    creating unique uri for individual resource
     @GetMapping(value = "/accounts/{accountNumber}")
-    public ResponseEntity<?> getAccountByAccountNumber(@PathVariable("accountNumber") String accNumber){
+    public ResponseEntity<?> getAccountByAccountNumber( @PathVariable("accountNumber") String accNumber ){
         System.out.println();
         ResponseEntity<?> responseEntity;
 

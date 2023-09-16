@@ -27,6 +27,8 @@ public class AccountService {
         if(acctype != null){
             accountList = accountList.stream().filter(x->x.getAccType().equals(acctype)).toList();
         }
+
+//        implementing the logic for sorting, pagination, find in case if the corresponding query parameters are present
 //
         return accountList;
     }
